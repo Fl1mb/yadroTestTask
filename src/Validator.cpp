@@ -5,7 +5,7 @@ Validator::Validator(const Time& start, const Time& end, int count):
 {}
 
 bool Validator::validateTime(const Time& time) const{
-    return startTime < time && time < endTime && time >= currentTime;
+    return startTime <= time && time <= endTime && time >= currentTime;
 }
 
 void Validator::setCurrentTime(const Time& time){
